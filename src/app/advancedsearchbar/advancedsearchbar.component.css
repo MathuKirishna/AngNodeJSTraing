@@ -32,33 +32,30 @@
 .bcard-action:hover {background-color: #8b0b06}
 
 
-/* The snackbar - position it at the bottom and in the middle of the screen */
+
 #snackbar {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: rgb(204, 203, 203); /* Black background color */
-    color: rgb(107, 6, 6); /* White text color */
+    visibility: hidden; 
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgb(204, 203, 203); 
+    color: rgb(107, 6, 6);
     font-size:23px;
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%; /* Center the snackbar */
-    top: 132px; /* 30px from the bottom */
+    text-align: center; 
+    border-radius: 2px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1;
+    left: 50%; 
+    top: 132px; 
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
 #snackbar.show {
-    visibility: visible; /* Show the snackbar */
-    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
-   However, delay the fade out process for 2.5 seconds */
+    visibility: visible; 
    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-/* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
     from {top: 0; opacity: 0;} 
     to {top: 132px; opacity: 1;}
