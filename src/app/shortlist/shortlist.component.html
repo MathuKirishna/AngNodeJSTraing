@@ -1,0 +1,72 @@
+<div class="row">
+ <h3 class="h3" style="color:rgb(216, 16, 16);text-align: center;margin-top:40px;margin-left:18%;font-size:30px;">
+    WISH LIST
+  </h3>
+ 
+  <div style="margin-left:360px;margin-bottom:10%;" class="column-md-2">
+    <div *ngFor="let employee of employees" id="employeeCard" style="margin-top:40px;" class="row">
+      <div class="column-md-2">
+        <div class="card" style="background-color:#c4c4c4;width:32cm;height: 10.5cm;">
+
+
+          <div style="width:32cm;height:10cm;" class="card-body">
+            <div class="row">
+              <div class="col s12 m6">
+                <div stle="height:32cm;" class="card ">
+                  <div class="card-content white-text">
+
+                    <button id={{employee.user_id}} (click)="removewishlist(this.employee.user_id)" style="margin-left:1100px;margin-top:20px;"
+                      class="btn">
+                      <img style="width:5mm;height:5mm;" src="./assets/delete.png">
+                    </button>
+                    <h3 style="text-transform: uppercase; color: darkred;;margin-left:40px;" id="employeeName;"> {{employee.first_name}} {{employee.last_name}}</h3>
+                    <hr>
+                    <div class="row">
+
+                      <div style="margin-left:80px;" class="column">
+                        <h5 style="margin-top:4px;">
+                          <img style="width:8mm;height:8mm;" src="./assets/job.jpg"> {{employee.jobtitle}} </h5>
+
+                        <h5>
+                          <img style="width:8mm;height:8mm;" src="./assets/location.jpg"> {{employee.city}}</h5>
+                      </div>
+                      <div style="margin-left:300px;" class="column">
+                        <h5>
+                          <img style="width:8mm;height:8mm;" src="./assets/expe.jpg"> {{employee.experience}} Years</h5>
+                        <h5>
+                          <img style="width:8mm;height:8mm;" src="./assets/edu.jpg"> {{employee.educationalQualification}}</h5>
+                      </div>
+                      <div style="margin-left:300px;" class="column">
+                        <h5>
+                          <img style="width:8mm;height:8mm;" src="./assets/salary.jpg"> {{employee.rate}}</h5>
+                        <h5>{{employee.rating}}
+                          <img style="width:8mm;height:8mm;" src="./assets/star.png">
+                        </h5>
+                      </div>
+                    </div>
+
+                    <hr>
+                    <h5 style="margin-left:50px;text-align: justify;margin-right:50px"> {{employee.description}}</h5>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div style="margin-top:5px;margin-left:1050px;" class="card-action">
+                  <button id={{employee.user_id}} (click)="viewprofile(this.employee.user_id)" class="btun btn-danger" style="height:1cm;width:3cm;color:white;">
+                      View Profile
+                     </button>
+                <div class="row">
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

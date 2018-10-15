@@ -1,0 +1,147 @@
+<div *ngFor="let user_detail of user_details" class="row">
+  <div class="column-md-4">
+    <h4 style="margin-top:60px;margin-left:130px ;color: rgb(148, 4, 4);background-color: rgb(231, 231, 231);">Hi! Get to know about me..</h4>
+    <div style="background-color: rgb(201, 201, 201);width:11cm;height:20cm;margin-left:3cm;margin-top:20px;" class="card">
+      <img src="{{user_detail.profile_picture}}" alt="Avatar" style="width:100%;">
+      <hr>
+      <div class="container">
+        <h5 style="color:rgb(175, 10, 10)">DISPLAY NAME :- {{user_detail.display_name}}</h5>
+        <h6>CITY :- {{user_detail.city}}</h6>
+        <hr>
+        <h6>EXPERIENCE :- {{user_detail.experience}}</h6>
+        <h6>EDUCATIONAL QUALIFICATIONS :- {{user_detail.educationalQualification}}</h6>
+        <hr>
+        <h6>RATING :- {{user_detail.rating}}</h6>
+        <h6>RATE :- {{user_detail.rate}}</h6>
+        <hr>
+        <h6>Email Address :- {{user_detail.email}}</h6>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="vl"></div>
+
+  <div class="column-md-4">
+
+    <h4 style="margin-top:60px;margin-left:2.9cm ;color: rgb(148, 4, 4);background-color:rgb(231, 231, 231);">Look into my profile..</h4>
+    <div class="row">
+
+      <div style="width:16cm;margin-left:3cm;margin-top:20px;height:7.5cm" class="card">
+
+
+        <div class="container mt-3">
+
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a style="width:7.3cm;background-color:rgb(204, 73, 73);color: white;" class="nav-link danger" data-toggle="tab" href="#home">
+                <b>Skills</b>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a style="width:7.4cm;background-color:rgb(204, 73, 73);color: white;margin-left:3px;" class="nav-link" data-toggle="tab" href="#menu1">
+                <b>Description</b>
+              </a>
+            </li>
+
+          </ul>
+          <div class="tab-content">
+            <div id="home" class="container tab-pane active">
+              <br>
+              <h3>Skills</h3>
+              <p>{{user_detail.skill}}</p>
+            </div>
+            <div id="menu1" class="container tab-pane fade">
+              <br>
+              <h3>Description</h3>
+              <p>{{user_detail.description}}</p>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <h4 style="color: rgb(148, 4, 4);background-color: rgb(231, 231, 231);margin-left:110px;margin-top:60px;">Check and Reserve Dates...</h4>
+    <div style="margin-left:105px;margin-top:30px;">
+      <div class="month">
+        <ul>
+          <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li>
+          <li>
+            October
+            <br>
+            <span style="font-size:18px">2018</span>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+
+      <ul class="days">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li><span class="active">16</span></li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+      </ul>
+    </div>
+
+
+
+  </div>
+  <div class="vl"></div>
+
+  <div style="margin-top:60px;margin-left:94px ;">
+    <h4 style="color: rgb(148, 4, 4);background-color: rgb(231, 231, 231);">My Works to View...</h4>
+
+    <div *ngFor="let user_gallery of user_galleries">
+
+
+
+      <img style="height:300px;width:300px;margin-top: 10px;" src="{{user_gallery.gallery}}" />
+
+
+
+    </div>
+
+
+  </div>
+</div>

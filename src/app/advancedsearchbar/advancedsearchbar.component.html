@@ -1,0 +1,148 @@
+<div class="row">
+  <div class="column-md-4">
+    <div style="margin-top:70px;margin-left:80px;" class="container">
+      <div class="row">
+        <div style="background-color:rgb(202, 202, 202)" class="col-md-10 ">
+          <div style="height:450px;margin-bottom:10px;background-color:hsl(180, 3%, 87%); " class="filter-sidebar">
+            <div style="background-color:rgb(82, 82, 82)" class="row card-body py-3 mb-4 ">
+              <h4 style="color:#ffffff ">Narrow Your Results</h4>
+            </div>
+            <div style="margin-top:20px;height:50px; " class="form-group">
+              <select class="form-control" id="selectDistance">
+                <option>Distance</option>
+                <option>5</option>
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+              </select>
+            </div>
+
+
+            <div style="margin-top:30px" class="form-group">
+              <select class="form-control" id="selectEducation">
+                <option>Education Qualities</option>
+                <option>Masters</option>
+                <option>Bachelors</option>
+                <option>Diploma</option>
+                <option>Certificate</option>
+              </select>
+            </div>
+
+            <div style="margin-top:40px" class="form-group">
+              <select class="form-control" id="selectExperience">
+                <option>Experience</option>
+                <option> 1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+
+            <div style="margin-top:40px" class="form-group">
+              <select class="form-control" id="selectRating">
+                <option>Rating(Out of Five)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+
+            <div style="margin-top:40px" class="form-group">
+              <select class="form-control" id="selectRates">
+                <option >Rates (Below)</option>
+                <option> 5000</option>
+                <option>10000</option>
+                <option>15000</option>
+                <option>20000</option>
+                <option>25000</option>
+              </select>
+            </div>
+            <hr>
+            <button (click)="advanceSearch()" style="margin-left:24px;color:white;" type="btn" class="btn  btn-danger ">Find Now</button>
+            <button (click)="reset()" style="margin-left:20px;" type="btn" class="btn btn-danger">Reset All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div style="margin-left:120px;margin-bottom: 12%;" class="column-md-2">
+      <div *ngFor="let employee of employees" id="employeeCard" style="margin-top:90px;" class="row">
+        <div class="column-md-2">
+          <div class="card" style="background-color:#c4c4c4;width:32cm;height: 10cm;">
+
+
+            <div style="width:32cm;height:8cm;" class="card-body">
+              <div class="row">
+                <div class="col s12 m6">
+                  <div stle="height:32cm;" class="card ">
+                    <div class="card-content white-text">
+
+                      <button class="add" id={{employee.user_id}} (click)="addToWishList(this.employee.user_id)" style="height:1.2cm;width:2.5cm;margin-top:5px;margin-left:1040px;color: rgb(170, 15, 15);">
+                      <h6>+ Add to Short List</h6> 
+                      </button>
+                      <h3 style="text-transform: uppercase; color: darkred;;margin-left:40px;" id="employeeName;"> {{employee.first_name}} {{employee.last_name}}</h3>
+                      <hr>
+                      <div class="row">
+
+                        <div style="margin-left:80px;" class="column">
+                          <h5 style="margin-top:4px;">
+                            <img style="width:8mm;height:8mm;" src="./assets/job.jpg"> {{employee.jobtitle}} </h5>
+
+                          <h5>
+                            <img style="width:8mm;height:8mm;" src="./assets/location.jpg"> {{employee.city}}</h5>
+                        </div>
+                        <div style="margin-left:300px;" class="column">
+                          <h5>
+                            <img style="width:8mm;height:8mm;" src="./assets/expe.jpg"> {{employee.experience}} Years</h5>
+                          <h5>
+                            <img style="width:8mm;height:8mm;" src="./assets/edu.jpg"> {{employee.educationalQualification}}</h5>
+                        </div>
+                        <div style="margin-left:300px;" class="column">
+                          <h5>
+                            <img style="width:8mm;height:8mm;" src="./assets/salary.jpg"> {{employee.rate}}</h5>
+                          <h5>{{employee.rating}}
+                            <img style="width:8mm;height:8mm;" src="./assets/star.png">
+                          </h5>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <h5 style="margin-left:50px;text-align: justify;margin-right:50px"> {{employee.description}}</h5>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div style="margin-top:5px;margin-left:1050px;" class="card-action">
+                  <button id={{employee.user_id}} (click)="viewprofile(this.employee.user_id)" class="btn btn-danger" style="height:1cm;width:3cm;color:white;">
+                   View Profile
+                  </button>
+                  <div class="row">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-left:50px" class="column-md-2">
+      <button style="margin-top:20px;margin-left:60px" class="button button3">
+        <b style="text-align: center;margin-top:20px;font-size:20px;" (click)="onClick()">Wish List</b>
+      </button>
+    </div>
+    <div id="snackbar">{{popup}}</div>
+
+
+
+  </div>

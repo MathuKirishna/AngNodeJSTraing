@@ -1,0 +1,44 @@
+<section class="search-banner bg-default text-white py-5" id="search-banner">
+    <div class="container py-5 my-5">
+        <div class="row text-center pb-4">
+            <div class="col-md-12">
+                <h2>Hair Stylist Search</h2>
+                <p>One Search, Millions of Hair Stylists</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div style="margin-left:60px;width:1000px;height:80px;margin-top:50px;" class="card">
+                    <div style="width:1000px;height:80px;background-color: #ECECEC;" class="card-body">
+                        <div class="row">
+                            <div class="column">
+                                <div style="margin-left:35px;width:300px;" class="form-group ">
+                                    <select id="inputStateTitle" class="form-control">
+                                        <option *ngFor="let title of titles" value="{{title.title}}">
+                                            {{title.title}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div style="margin-left:1px;width:300px;" class="form-group ">
+                                    <select id="inputStateLocation" class="form-control">
+                                        <option *ngFor="let location of locations" value="{{location.city_name}}">
+                                            {{location.city_name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <button (click)="onClick()" style="margin-left:1px;width:300px;color: floralwhite;" type="button" class="btn btn-danger">Search Hair Stylist</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
