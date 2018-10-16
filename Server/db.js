@@ -1,13 +1,5 @@
-const mysql = require('mysql');
-// var connection = mysql.createConnection({
-//     host:'localhost',
-//     user:'root',
-//     password:'',
-//     database:'db_cutecut'
-// });
-// connection.connect(function(err) {
-//     if (err) throw err;
-// });
+const mysql = require('mysql');\
+//Sigleton design pattern for the connection pool.
 var pool;
 module.exports = {
     getPool: function () {

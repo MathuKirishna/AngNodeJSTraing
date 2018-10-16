@@ -13,6 +13,7 @@ export class AdvancedSearchService {
   public user_id : any;
   
 
+  //This method is used to get employee details for searched values.
   public advancesearchValues(title:String,city:String,education:String,rating:String,rates:String,experience:String,distance:String,latitude:String,longitude:String):Promise<String[]>{
     
     
@@ -24,6 +25,7 @@ export class AdvancedSearchService {
      return this.http.get<String[]>(url).toPromise();
   }
 
+  //This method is to add selected employee to current user wish list.
   public addtowishlist(user_id:String,employee_id:String):Promise<String[]>{
     
     

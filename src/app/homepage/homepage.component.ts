@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./homepage.component.css']
 })
 
+
 export class HomepageComponent implements OnInit {
   route:Router;
   constructor(private router: Router) { 
@@ -16,11 +17,13 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+  /**
+   * This method is used to navigate PrimarySearch page.
+   */
   onClick() {
 
     this.route.navigate(['search']);
-    return 'search';
+    
   }
 
 }

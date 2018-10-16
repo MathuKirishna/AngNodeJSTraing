@@ -39,8 +39,11 @@ router.get('/search',(req,res)=>{
             console.log(query);
         }else{
             console.log('Successfully query proceded.');
-            console.log(rows);
-            res.send(rows);
+            console.log(rows.length);
+            
+                res.send(rows);
+            
+            
         }
     });
 });

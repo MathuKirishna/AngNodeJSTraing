@@ -15,19 +15,22 @@ export class SearchService {
   public static searchCity : String;
 
   public test:Promise<String[]>;
+  //This method is used to get cities from the database
   public getDropDownValues(): Promise<String[]> {
     this.test = this.http.get<String[]>('http://localhost:3000/primarysearch/city').toPromise();
     console.log(this.test);
     return this.test;
   }
+  //This id s get method for dearch city
   public getSearchCity():String {
     return SearchService.searchCity;
   }
-  //u can use promise or observables
-  // NOTE:always use services to connect to server since it is a good practice
+
+  // This method is used to get titles from the database
   public gettitlesDropDownValues(): Promise<String[]> {
     return this.http.get<String[]>('http://localhost:3000/primarysearch/title').toPromise();
   }
+  // This method is used to get employee details for selected city and job title from the database.
   public searchValues(title:String,city:String):Promise<String[]>{
     SearchService.searchTitle =title;
     SearchService.searchCity = city;

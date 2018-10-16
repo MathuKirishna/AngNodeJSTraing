@@ -9,29 +9,38 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './view-profile.component.html',
   styleUrls: ['./view-profile.component.css']
 })
+/**
+ * This class is used to view selected emplpoyee profile.
+ */
 export class ViewProfileComponent implements OnInit {
+  //Document used to get HTML element.
   document: any;
+
+  //Selected employee user id.
   user_id: any;
+
+  //Selected employee user details.
   user_details: any[];
-  detail: any;
+
+  //Selected emplpoyee galleries
   user_galleries: any[];
   constructor(private advancedSearchService: AdvancedSearchService, private viewprofile: ViewProfileService) {
     this.user_id = this.advancedSearchService.user_id;
     console.log(this.user_id);
   }
 
+  //while deploying the page below method ensures that userdetails and user gallery detail are stored.
   ngOnInit() {
-    this.viewprofile.viewprofile(this.user_id).then(optionValues => {
-      this.user_details = optionValues;
+    this.viewprofile.viewprofile(this.user_id).then(results => {
+      this.user_details = results;
 
-      console.log(optionValues);
-      //here we initialize locations and use this in our html template to bind dropdown values
+      console.log(results);
+      
     });
-    this.viewprofile.getgallery(this.user_id).then(optionValues => {
-      this.user_galleries = optionValues;
+    this.viewprofile.getgallery(this.user_id).then(results => {
+      this.user_galleries = results;
 
-      console.log(optionValues);
-      //here we initialize locations and use this in our html template to bind dropdown values
+      console.log(results);
     });
 
 
