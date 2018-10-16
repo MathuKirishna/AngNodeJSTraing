@@ -75,3 +75,148 @@
     from {top: 132px; opacity: 1;}
     to {top: 0; opacity: 0;}
 }
+
+.container{
+   margin-top:70px;
+   margin-left:80px;
+}
+
+.col-md-10 {
+   background-color:rgb(202, 202, 202); 
+}
+
+.filter-sidebar{
+   height:450px;
+   margin-bottom:10px;
+   background-color:hsl(180, 3%, 87%); 
+}
+
+.row1{
+   background-color:rgb(82, 82, 82);
+
+}
+.filter{
+   color:#ffffff;
+}
+
+.form-group1{
+   margin-top:20px;
+   height:50px;   
+}
+
+.form-group2{
+   margin-top:30px; 
+}
+
+.form-group3{
+   margin-top:40px;
+}
+
+.btn{
+   margin-left:30px;
+   color:white;
+}
+.column1-md-2{
+   margin-left:120px;
+   margin-bottom: 12%;
+}
+
+.row2{
+    margin-top:90px;
+}
+
+.card1{
+    background-color:#c4c4c4;
+    width:32cm;
+    height: 10cm;
+}
+
+.card-body1{
+   width:32cm;height:8cm;
+}
+
+.add{
+    height:1.2cm;
+    width:2.5cm;
+    margin-top:5px;
+    margin-left:1040px;
+    color: rgb(170, 15, 15); 
+}
+
+.name{
+    text-transform: uppercase;
+     color: darkred;
+     margin-left:40px;
+}
+
+.column1{
+    margin-left:80px;
+}
+
+.column2{
+   margin-left:300px;
+}
+
+.job{
+   margin-top:4px;
+}
+
+.title{
+    width:8mm;
+    height:8mm;
+}
+
+.city{
+   width:8mm;
+   height:8mm;
+}
+
+.experience{
+    width:8mm;
+    height:8mm;
+}
+
+.education{
+   width:8mm;
+   height:8mm;
+}
+
+.rate{
+    width:8mm;
+    height:8mm;
+}
+
+.rating{
+   width:8mm;
+   height:8mm; 
+}
+
+.column3{
+    margin-left:300px; 
+}
+
+.description{
+   margin-left:50px;
+   text-align: justify;
+   margin-right:50px
+}
+
+.card-action{
+    margin-top:5px;
+    margin-left:1050px; 
+}
+
+.column-md-2{
+    margin-left:50px;
+}
+
+.button{
+   margin-top:20px;
+   margin-left:55px;
+}
+
+.wish{
+   text-align: center;
+   margin-top:20px;
+   font-size:20px;
+}

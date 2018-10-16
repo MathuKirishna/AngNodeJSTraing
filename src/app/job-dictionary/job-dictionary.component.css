@@ -1,0 +1,40 @@
+.heading1{
+    text-align:center;
+    margin-top:30mm;
+
+}
+
+.para1{
+    margin-left:200px;
+    margin-right:200px;
+    margin-top:20px;
+    text-align:center;
+}
+
+.card{
+    width:1300px;
+    margin-left:320px;
+    margin-top:70px;
+    background-color:rgb(192, 193, 196);
+    color:rgb(230, 23, 23);
+}
+
+.ul1{
+   list-style-type:disc;
+   margin-left:140px;
+   margin-top:30px;
+}
+
+.ul2{
+   list-style-type:disc;
+   margin-left:80px;
+   margin-top:30px;
+ }
+
+ .ul3{
+    list-style-type:disc;
+    margin-top:30px;
+    margin-left:80px;
+ }
+
+ 
