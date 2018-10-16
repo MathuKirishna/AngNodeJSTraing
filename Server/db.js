@@ -1,4 +1,4 @@
-const mysql = require('mysql');\
+const mysql = require('mysql');
 //Sigleton design pattern for the connection pool.
 var pool;
 module.exports = {
